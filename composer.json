@@ -1,0 +1,28 @@
+{
+    "name": "kenny1911/doctrine-dbal-sqlx",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kenny1911",
+            "email": "o-muzyka@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "mkdir var"
+        ]
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kenny1911\\DoctrineDbalSqlX\\": "src/"
+        }
+    }
+}
