@@ -16,7 +16,9 @@
         "post-install-cmd": [
             "mkdir var"
         ],
-        "psalm": "./tools/psalm/vendor/bin/psalm"
+        "psalm": "./tools/psalm/vendor/bin/psalm",
+        "cs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix",
+        "cs-check": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer check"
     },
     "require": {
         "php": "^8.1"
