@@ -19,7 +19,12 @@
         "psalm": "./tools/psalm/vendor/bin/psalm",
         "cs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix",
         "cs-check": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer check",
-        "phpunit": "phpunit"
+        "phpunit": "phpunit",
+        "checks": [
+            "@cs-check",
+            "@phpunit",
+            "@psalm -- --no-cache"
+        ]
     },
     "require": {
         "php": "^8.1"
