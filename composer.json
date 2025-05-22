@@ -18,14 +18,23 @@
         ],
         "psalm": "./tools/psalm/vendor/bin/psalm",
         "cs-fix": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix",
-        "cs-check": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer check"
+        "cs-check": "PHP_CS_FIXER_IGNORE_ENV=1 ./tools/php-cs-fixer/vendor/bin/php-cs-fixer check",
+        "phpunit": "phpunit"
     },
     "require": {
         "php": "^8.1"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^12.1"
+    },
     "autoload": {
         "psr-4": {
             "Kenny1911\\DoctrineDbalSqlX\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kenny1911\\DoctrineDbalSqlX\\Tests\\": "tests/"
         }
     }
 }
