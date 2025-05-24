@@ -1,5 +1,6 @@
 {
-    "name": "kenny1911/doctrine-dbal-sqlx",
+    "name": "kenny1911/doctrine-sqlx",
+    "keywords": ["doctrine", "dbal", "sql", "sqlx", "placeholder", "template", "context", "parameter", "param"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -35,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kenny1911\\DoctrineDbalSqlX\\": "src/"
+            "Kenny1911\\DoctrineSqlx\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kenny1911\\DoctrineDbalSqlX\\Tests\\": "tests/"
+            "Kenny1911\\DoctrineSqlx\\Tests\\": "tests/"
         }
     }
 }

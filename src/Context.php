@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenny1911\DoctrineDbalSqlX;
+namespace Kenny1911\DoctrineSqlx;
 
 use Doctrine\DBAL\ArrayParameterType;
 use Doctrine\DBAL\ParameterType;

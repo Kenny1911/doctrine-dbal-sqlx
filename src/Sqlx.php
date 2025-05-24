@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kenny1911\DoctrineDbalSqlX;
+namespace Kenny1911\DoctrineSqlx;
 
 use Doctrine\DBAL\Cache\QueryCacheProfile;
 use Doctrine\DBAL\Connection as DbalConnection;
@@ -12,7 +12,7 @@ use Doctrine\DBAL\Result;
 /**
  * @api
  */
-final class Connection
+final class Sqlx
 {
     public function __construct(
         private readonly DbalConnection $connection,

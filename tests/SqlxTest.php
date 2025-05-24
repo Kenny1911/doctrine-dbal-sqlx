@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Kenny1911\DoctrineDbalSqlX\Tests;
+namespace Kenny1911\DoctrineSqlx\Tests;
 
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Types;
-use Kenny1911\DoctrineDbalSqlX\Connection;
-use Kenny1911\DoctrineDbalSqlX\Ctx;
+use Kenny1911\DoctrineSqlx\Ctx;
+use Kenny1911\DoctrineSqlx\Sqlx;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @psalm-internal Kenny1911\DoctrineDbalSqlX\Tests
+ * @psalm-internal Kenny1911\DoctrineSqlx\Tests
  */
-final class ConnectionTest extends TestCase
+final class SqlxTest extends TestCase
 {
-    private Connection $connection;
+    private Sqlx $connection;
 
     /**
      * @throws Exception
@@ -50,7 +50,7 @@ final class ConnectionTest extends TestCase
                 SQL,
         );
 
-        $this->connection = new Connection($dbalConnection);
+        $this->connection = new Sqlx($dbalConnection);
     }
 
     /**

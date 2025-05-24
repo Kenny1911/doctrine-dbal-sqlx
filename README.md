@@ -1,4 +1,4 @@
-# Doctrine DBAL SQLX
+# Doctrine SQLX
 
 [ English | [Русский](./README-RU.md) ]
 
@@ -16,12 +16,12 @@ composer require kenny1911/doctrine-dbal-sqlx
 ### Basic Example
 
 ```php
-use Doctrine\DBAL\Connection as DbalConnection;
-use Kenny1911\DoctrineDbalSqlX\Connection;
-use Kenny1911\DoctrineDbalSqlX\Ctx;
+use Doctrine\DBAL\Connection;
+use Kenny1911\DoctrineSqlx\Sqlx;
+use Kenny1911\DoctrineSqlx\Ctx;
 
-/** @var DbalConnection $dbalConnection */
-$connection = new Connection($dbalConnection);
+/** @var Connection $connection */
+$sqlx = new Sqlx($connection);
 
 $result = $connection->executeQuery(static fn(Ctx $ctx): string => <<<SQL
     "SELECT * FROM users WHERE id = {$ctx(1)}"
@@ -30,28 +30,12 @@ $result = $connection->executeQuery(static fn(Ctx $ctx): string => <<<SQL
 ```
 
 Instead of the traditional approach:
+
 ```php
 $result = $connection->executeQuery(
-    'SELECT * FROM users WHERE id = :id',
-    ['id' => 1],
+    sql: 'SELECT * FROM users WHERE id = :id',
+    params: ['id' => 1],
 );
-```
-
-### With QueryBuilder
-
-```php
-use Doctrine\DBAL\Connection;
-use Kenny1911\DoctrineDbalSqlX\Context;
-
-/** @var Connection $connection */
-$ctx = new Context();
-
-$result = $connection->createQueryBuilder()
-    ->select('*')
-    ->from('users')
-    ->where("id = {$ctx(1)}")
-    ->setParameters($ctx->getParams(), $ctx->getTypes())
-    ->executeQuery();
 ```
 
 ## Benefits
